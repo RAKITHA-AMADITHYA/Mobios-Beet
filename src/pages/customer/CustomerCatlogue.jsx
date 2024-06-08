@@ -5,6 +5,19 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import ProductCard from '../../components/product card/ProductCard'
+import keels from '../../assets/beet/keels.png'
+import Cargeels from '../../assets/beet/Cargeels.png'
+import Arpico from '../../assets/beet/Arpico.png'
+import carnage from '../../assets/beet/carnage.png'
+import nolimit from '../../assets/beet/nolimit.png'
+import fao from '../../assets/beet/fao.png'
+import moose from '../../assets/beet/moose.png'
+import cameralk from '../../assets/beet/cameralk.png'
+import ideals from '../../assets/beet/ideals.png'
+import appleAsia from '../../assets/beet/appleAsia.png'
+import tecRoot from '../../assets/beet/tecRoot.png'
+import Footer from '../../components/footer/Footer'
+
 
 const CustomerCatlogue = () => {
 
@@ -67,22 +80,62 @@ const CustomerCatlogue = () => {
             </Grid>
         </Grid>
 
-
+        {/* Groceries */}
         <Grid item xs={12} md={6} p={5}>
             <Typography variant="h4">
                 GROCERIES
             </Typography>
+
+            <Grid item xs={12} display={'flex'} mt={5} gap={'50px'}>
+                <ProductCard name="Keels" image={keels} />
+                <ProductCard name="Cargills" image={Cargeels} />
+                <ProductCard name="Arpico" image={Arpico} />  <ProductCard name="Keels" image={keels} />
+                <ProductCard name="Cargills" image={Cargeels} />
+                
+            </Grid>
+
+
+
         </Grid>
-    <Grid item xs={12} display={'flex'} p={5} gap={'50px'}>
-<ProductCard/>
-<ProductCard/>
 
-<ProductCard/>
-<ProductCard/>
-<ProductCard/>
+         {/* FASHION */}
+         <Grid item xs={12} md={6} p={5}>
+            <Typography variant="h4">
+                FASHION
+            </Typography>
+
+            <Grid item xs={12} display={'flex'} mt={5} gap={'50px'}>
+                <ProductCard name="Carnage" image={carnage} />
+                <ProductCard name="Nolimit" image={nolimit} />
+                <ProductCard name="F.A.O" image={fao} /> 
+                <ProductCard name="Moose" image={moose} />
+                <ProductCard name="Carnage" image={carnage} />
+               
+            </Grid>
 
 
-    </Grid>
+
+        </Grid>
+           
+ {/* ELECTRIC APPLIANCES */}
+ <Grid item xs={12} md={6} p={5}>
+            <Typography variant="h4">
+                ELECTRIC APPLIANCES
+            </Typography>
+
+            <Grid item xs={12} display={'flex'} mt={5} gap={'50px'}>
+                <ProductCard name="Camera.LK" image={cameralk} />
+                <ProductCard name="iDealz" image={ideals} />
+                <ProductCard name="Apple Asia" image={appleAsia} /> 
+                <ProductCard name="Tecroot" image={tecRoot} />
+                <ProductCard name="Camera.LK" image={cameralk} />
+               
+            </Grid>
+
+
+
+        </Grid>
+<Footer/>
 
     </>
     )
