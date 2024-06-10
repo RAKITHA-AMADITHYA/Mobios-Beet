@@ -19,6 +19,7 @@ const Loyalty = lazy(() => import("./pages/Loyalty"));
 const Login = lazy(() => import("./pages/Login"));
 const MerchantSignup = lazy(() => import("./pages/merchant/MerchSignup.jsx"));
 const AboutUs = lazy(() => import("./pages/AboutUs.jsx"));
+const MerchantHome = lazy(() => import("./pages/merchant/MerchantHome.jsx"));
 
 
 
@@ -49,13 +50,14 @@ function App() {
 
           <Route element={<Layout />}>
             <Route path="/" element={<SuspenseWrapper><LandingPg /></SuspenseWrapper>} />
-            <Route path="/customer-catlogue" element={<SuspenseWrapper><CustomerCatlogue /></SuspenseWrapper>} />
+            <Route path="/catlogue" element={<SuspenseWrapper><CustomerCatlogue /></SuspenseWrapper>} />
             <Route path="/customer-home" element={<SuspenseWrapper><CustomerHome /></SuspenseWrapper>} />
             <Route path="/beet-pos" element={<SuspenseWrapper><PosTerminal /></SuspenseWrapper>} />
             <Route path="/beet-tracking" element={<SuspenseWrapper><Tracking /></SuspenseWrapper>} />
             <Route path="/beet-communication" element={<SuspenseWrapper><Communication/></SuspenseWrapper>} />
             <Route path="/beet-loyalty" element={<SuspenseWrapper><Loyalty/></SuspenseWrapper>} />
             <Route path="/aboutus" element={<SuspenseWrapper><AboutUs/></SuspenseWrapper>} />
+            <Route path="/merchant-home" element={<SuspenseWrapper><MerchantHome/></SuspenseWrapper>} />
 
 
            

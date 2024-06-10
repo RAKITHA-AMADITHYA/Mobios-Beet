@@ -7,8 +7,9 @@ const LoyaltyCard = ({image,name}) => {
     const isMediumDown = useMediaQuery((theme) => theme.breakpoints.down('md'));
   return (
     <>
-   {isMediumUp &&( <Card >
-        <img src={image} style={{minWidth:'255px',maxWidth:'255px',minHeight:'290px',maxHeight:'290px'}} alt="" />
+   {isMediumUp &&( <Card style={{margin:10}} >
+    <div style={{display:'flex',justifyContent:'center'}}>
+        <img src={image} style={{minHeight:'290px',maxHeight:'290px',width:'100%'}} alt="" /></div>
         <Grid p={2}>
           
            <div style={{display:'flex', justifyContent:'center'}}>

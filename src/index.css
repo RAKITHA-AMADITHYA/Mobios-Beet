@@ -1,26 +1,35 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  background-color: #ffff
-  ;
+body {
+  background-color: #ffff;
 }
 
 ::-webkit-scrollbar {
-    /* width: 5px; */
-  }
-  
+  width: 5px;
+}
 
-  ::-webkit-scrollbar-track {
-    background: #FFF; 
-  }
-  
-  /* Apply styles to the scrollbar thumb */
-  ::-webkit-scrollbar-thumb {
-    background-color: #FF4D00; 
-    border-radius: 3px; 
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Apply styles to the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #b5334a;
+  border-radius: 3px;
+}
+
+/* Hide scrollbar on xs and sm screens */
+@media (max-width: 600px) {
+  ::-webkit-scrollbar {
+    display: none;
   }
 
+  /* For Firefox */
+  body {
+    scrollbar-width: none;
+  }
+}

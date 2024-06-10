@@ -44,14 +44,17 @@ const LandingPg = () => {
                         WELCOME TO <span style={{ color: '#b5334a' }}>BEET</span>
                     </Typography>
                     <Typography mt={2} variant="h6" data-aos-anchor-placement="top-bottom">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam.r incididunt
-                        ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam.r incididunt
-                        ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam.
+                    The Beet platform empowers customers to discover their preferred brands and merchants, while simultaneously granting businesses 
+                    the ability to oversee all aspects of their operations.The Business would benefit by using the multiple modules the Beet platform offers starting from supplier and inventory management to sales, customer loyalty,
+                     and delivery management.
+                    </Typography>
+
+                    <Typography mt={2} variant="h6" data-aos-anchor-placement="top-bottom">
+                    The customer would benefit by getting information on their favorite brands, offers, loyalty schemes and nearest stores.This platform establishes a mutually beneficial scenario for both customers and merchants, fostering improved visibility of needs and the ability for both parties to engage with each other digitally in an effective manner.
                     </Typography>
                     <div style={{ marginTop: '30px' }}>
                         {/* <AnimatedButton btnName="Register" onClick={handleOpen} /> */}
-                        <Button variant='contained' onClick={handleOpen}>Register</Button>
+                        <Button variant='contained' onClick={handleOpen}>Contact Us</Button>
                     </div>
                 </Grid>
                 <Grid item xs={12} md={6} display={'flex'} justifyContent={'center'} alignItems={'center'}>
@@ -65,14 +68,16 @@ const LandingPg = () => {
                     <Typography variant="h3" data-aos-anchor-placement="top-bottom">
                         WELCOME TO <span style={{ color: '#b5334a' }}>BEET</span>
                     </Typography>
-                    <Typography mt={2} variant="subtitle1" data-aos-anchor-placement="top-bottom">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam.r incididunt
-                        ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam.r incididunt
-                        ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam.
+                    <Typography mt={2} variant="subtitle1"fontWeight={400} data-aos-anchor-placement="top-bottom">
+                    The Beet platform empowers customers to discover their preferred brands and merchants, while simultaneously granting businesses 
+                    the ability to oversee all aspects of their operations.The Business would benefit by using the multiple modules the Beet platform offers starting from supplier and inventory management to sales, customer loyalty,
+                     and delivery management.
                     </Typography>
-                    <div style={{ marginTop: '30px' }}>
-                        <Button variant='contained' fullWidth onClick={handleOpen}>Register</Button>
+                    <Typography mt={2} variant="subtitle1"fontWeight={400} data-aos-anchor-placement="top-bottom">
+                    The customer would benefit by getting information on their favorite brands, offers, loyalty schemes and nearest stores.This platform establishes a mutually beneficial scenario for both customers and merchants, fostering improved visibility of needs and the ability for both parties to engage with each other digitally in an effective manner.
+                    </Typography>
+                    <div style={{ marginTop: '20px' }}>
+                        <Button variant='contained' fullWidth onClick={handleOpen}>Contact Us</Button>
                     </div>
                 </Grid>
                 <Grid item xs={12}  display={'flex'} justifyContent={'center'} alignItems={'end'}>

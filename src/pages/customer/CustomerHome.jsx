@@ -15,15 +15,10 @@ import HealthBeauty from '../../assets/beet/HealthBeauty.png'
 import Dining from '../../assets/beet/Dining.png'
 import Mother from '../../assets/beet/Mother.png'
 import Fashion from '../../assets/beet/Fashion.png'
-
-
-
-
-
-
 import Footer from '../../components/footer/Footer'
 import LoyaltyCard from '../../components/loyalty card/LoyaltyCard'
 import CategoryCard from '../../components/category card/CategoryCard'
+import Slider from 'react-slick'
 
 
 const CustomerHome = () => {
@@ -31,7 +26,40 @@ const CustomerHome = () => {
     const isMediumUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
     const isMediumDown = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
-
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000, // 3 seconds
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };
 
     return (<>
 
@@ -89,15 +117,15 @@ const CustomerHome = () => {
 
             </div>
 
-            <Grid item xs={12} display={'flex'} mt={5} gap={'50px'}>
-
-                <LoyaltyCard image={keels} />
-                <LoyaltyCard image={Cargeels} />
-                <LoyaltyCard image={carnage} />
-                <LoyaltyCard image={appleAsia} />
-                <LoyaltyCard image={Arpico} />
-
-            </Grid>
+<div style={{marginTop:'20px'}}>
+            <Slider {...sliderSettings} >
+          <LoyaltyCard image={keels} />
+          <LoyaltyCard image={Cargeels} />
+          <LoyaltyCard image={carnage} />
+          <LoyaltyCard image={appleAsia} />
+          <LoyaltyCard image={Arpico} />
+          
+        </Slider></div>
 
 
 

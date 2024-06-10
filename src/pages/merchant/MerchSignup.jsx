@@ -82,7 +82,7 @@ const MerchantSignup = () => {
         {isMediumDown && (
             <Grid container >
                 <Grid item xs={12} display={'flex'} justifyContent={'center'}>
-                    <img src={SignupImg2} width={'70%'} alt="" />
+                    <img src={SignupImg2} width={'80%'} alt="" />
 
                 </Grid>
 
