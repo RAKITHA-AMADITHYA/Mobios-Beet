@@ -76,7 +76,7 @@ const CustomerCatlogue = () => {
                 <TextField sx={{ marginTop: '50px', width: '100%' }} placeholder='Search shop'></TextField>
             </Grid>
             <Grid item xs={12} md={6} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-                <img src={catlogue} alt="" />
+                <img src={catlogue} width={'90%'} alt="" />
             </Grid>
         </Grid>
 

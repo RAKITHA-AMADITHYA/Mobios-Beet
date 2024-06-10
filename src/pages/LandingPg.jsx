@@ -112,13 +112,7 @@ const LandingPg = () => {
                             </Grid>
                         </Grid>
                     </Grid>
-                    {/* <Typography variant="h6" component="h2">
-            Register
-          </Typography>
-          <Typography sx={{ mt: 2 }}>
-            This is the registration modal content.
-          </Typography>
-          <Button onClick={handleClose} sx={{ mt: 2 }}>Close</Button> */}
+                   
                 </Box>
             </Modal>
         </>
