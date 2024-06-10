@@ -1,4 +1,4 @@
-import { Button, Checkbox, Grid, TextField, Typography } from '@mui/material'
+import { Button, Checkbox, Grid, TextField, Typography, useMediaQuery } from '@mui/material'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import React from 'react'
 import 'slick-carousel/slick/slick-theme.css'
@@ -11,17 +11,20 @@ import { useNavigate } from 'react-router-dom'
 const CustomerSignup = () => {
 
 
-    const navigate =useNavigate();
+    const isMediumUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
+    const isMediumDown = useMediaQuery((theme) => theme.breakpoints.down('md'));
+
+    const navigate = useNavigate();
 
     const handlelogin = () => {
         navigate("/sign-in")
-        handleClose(); 
-      };
-    
+        handleClose();
+    };
+
 
 
     return (<>
-        <Grid container >
+        {isMediumUp && (<Grid container >
 
             <Grid item xs={12} md={6} display={'flex'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'}>
                 <img src={SignupImg} width={'80%'} alt="" />
@@ -58,11 +61,105 @@ const CustomerSignup = () => {
 
                     </Grid>
                 </Grid>
-                <div style={{ display: 'flex', justifyContent: 'center', marginTop:'10px'}}>
+                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                     <FormControlLabel required control={<Checkbox />} label="I agree to Terms & Conditions " /></div>
-                    <Button onClick={handlelogin} variant='contained' style={{ marginTop: '10px' }} fullWidth>Sign Up</Button>
+                <Button onClick={handlelogin} variant='contained' style={{ marginTop: '10px' }} fullWidth>Sign Up</Button>
             </Grid>
-        </Grid>
+        </Grid>)}
+
+        {isMediumDown && (
+            <Grid container >
+
+                <Grid item xs={12} display={'flex'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'}>
+                    <img src={SignupImg} width={'40%'} alt="" />
+
+                </Grid>
+                <Grid item xs={12} md={6} p={4} display={'flex'} flexDirection={'column'} justifyContent={'center'}>
+                    <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center' }}>
+                        <Typography variant="h2">
+                            Welcome To <span style={{ color: '#b5334a' }}> BEET</span>
+                        </Typography>
+                        <Typography variant="subtitle1" >Sign Up for Customers</Typography></div>
+                    <div style={{ marginTop: '30px' }}>
+                        <h5>Enter your Email</h5>
+                        <TextField
+                            type='email'
+                            fullWidth
+                            sx={{
+                                '& .MuiInputBase-root': {
+                                    height: '40px', // Adjust the height as needed
+                                },
+                                '& .MuiInputBase-input': {
+                                    padding: '8px', // Adjust the padding to reduce the height
+                                    fontSize: '14px', // Adjust the font size as needed
+                                }
+                            }}
+                        />
+                    </div>
+                    <div style={{ marginTop: '10px' }}>
+                        <h5>Enter your Name</h5>
+                        <TextField
+                            type='text'
+                            fullWidth
+                            sx={{
+                                '& .MuiInputBase-root': {
+                                    height: '40px', // Adjust the height as needed
+                                },
+                                '& .MuiInputBase-input': {
+                                    padding: '8px', // Adjust the padding to reduce the height
+                                    fontSize: '14px', // Adjust the font size as needed
+                                }
+                            }}
+                        />
+                    </div>
+
+
+
+                    <Grid item  >
+                        <div style={{ marginTop: '10px' }}>
+                            <h5>Enter Number</h5>
+                            <TextField
+                                type='number'
+                                fullWidth
+                                sx={{
+                                    '& .MuiInputBase-root': {
+                                        height: '40px', // Adjust the height as needed
+                                    },
+                                    '& .MuiInputBase-input': {
+                                        padding: '8px', // Adjust the padding to reduce the height
+                                        fontSize: '14px', // Adjust the font size as needed
+                                    }
+                                }}
+                            />
+                        </div>
+
+                    </Grid>
+
+                    <Grid item >
+                        <div style={{ marginTop: '10px' }}>
+                            <h5>Enter Password</h5>
+                            <TextField
+                                type='password'
+                                fullWidth
+                                sx={{
+                                    '& .MuiInputBase-root': {
+                                        height: '40px', // Adjust the height as needed
+                                    },
+                                    '& .MuiInputBase-input': {
+                                        padding: '8px', // Adjust the padding to reduce the height
+                                        fontSize: '14px', // Adjust the font size as needed
+                                    }
+                                }}
+                            />
+                        </div>
+
+                    </Grid>
+
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <FormControlLabel required control={<Checkbox />} label="I agree to Terms & Conditions " /></div>
+                    <Button onClick={handlelogin} variant='contained' style={{ marginTop: '10px' }} fullWidth>Sign Up</Button>
+                </Grid>
+            </Grid>)}
 
 
 

@@ -63,7 +63,59 @@ const Footer = () => {
 
       </Grid>)}
 
+      {isMediumDown && (<Grid container p={2}>
+        <Grid item md={4}>
+          <div style={{display:'flex',justifyContent:'center'}}>
+          <img src={logo} width={'12%'} alt="" /></div>
+          <Typography variant='body2' mt={'10px'} color={'#FFFF'}>
+          Beet, developed by Mobios (Pvt) Ltd., integrates the Supply Chain Management (SCM), Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), and Loyalty features for merchants. This enables customers to have comprehensive insight into their purchases while being rewarded for their loyalty.
+          </Typography>
 
+        </Grid>
+<Grid container mt={5}>
+        <Grid item xs={6} display={'flex'} justifyContent={'center'} alignItems={'center'} flexDirection={'colunm'} textAlign={'start'}>
+          <Typography variant='subtitle2' mt={'2px'} fontWeight={800} color={'#FFFF'}>
+            ABOUT<br />
+            TERMS & CONDITIONS<br />
+            PRIVACY STATEMENT<br />
+            BEET FOR MERCHANTS<br />
+            Beet FOR CUSTOMERS<br />
+            MERCHANTS LIST<br />
+            MY LOYALTY
+
+
+          </Typography>
+        </Grid>
+
+        <Grid item md={6}   >
+
+          {/* Location */}
+          <div style={{ display: 'flex', gap: '8px',color:'#fff' ,marginTop:'40px'}}>
+          <LocationOnIcon sx={{ fontSize: { xs: '30px', md: '12px', lg: '30px' } }} />
+          <Typography variant='subtitle2'>Mobios (Pvt) Ltd 12
+              Ridgeway Place<br/>
+              Colombo 4
+              Sri Lanka.</Typography>
+          </div>
+
+          {/* Phone */}
+          <div style={{ display: 'flex', gap: '15px',color:'#fff',marginTop:'10px' }}>
+          <LocalPhoneIcon sx={{ fontSize: {  lg: '30px' } }} />
+          <Typography variant='subtitle2'>+94 115 968 000</Typography>
+          </div>
+
+           {/* Mail */}
+          <div style={{ display: 'flex', gap: '16px',color:'#fff',marginTop:'10px' }}>
+          <MailIcon sx={{ fontSize: {  lg: '30px' } }} />
+          <Typography variant='subtitle2'>info@mobios.lk</Typography>
+          </div>
+        </Grid>
+
+</Grid>
+<div style={{display:'flex',justifyContent:'center'}}>
+      <img src={apps} width={'90%'} alt="" style={{ marginTop: '10px' }} />
+</div>
+      </Grid>)}
 
 
 

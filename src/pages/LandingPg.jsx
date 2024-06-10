@@ -1,4 +1,4 @@
-import { Button, Grid, Typography, Modal, Box, Card } from '@mui/material';
+import { Button, Grid, Typography, Modal, Box, Card, useMediaQuery } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -27,13 +27,18 @@ const LandingPg = () => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
+    const isMediumUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
+    const isMediumDown = useMediaQuery((theme) => theme.breakpoints.down('md'));
+
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
 
+
     return (
         <>
-            <Grid container>
+
+            {isMediumUp && (<Grid container>
                 <Grid item xs={12} md={6} p={5}>
                     <Typography variant="h2" data-aos-anchor-placement="top-bottom">
                         WELCOME TO <span style={{ color: '#b5334a' }}>BEET</span>
@@ -53,9 +58,31 @@ const LandingPg = () => {
                     <img src={Girl} width={'100%'} alt="" />
                 </Grid>
             </Grid>
+            )}
+            {isMediumDown && (
+                <Grid container>
+                <Grid item xs={12} md={6} p={2}>
+                    <Typography variant="h3" data-aos-anchor-placement="top-bottom">
+                        WELCOME TO <span style={{ color: '#b5334a' }}>BEET</span>
+                    </Typography>
+                    <Typography mt={2} variant="subtitle1" data-aos-anchor-placement="top-bottom">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam.r incididunt
+                        ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam.r incididunt
+                        ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam.
+                    </Typography>
+                    <div style={{ marginTop: '30px' }}>
+                        <Button variant='contained' fullWidth onClick={handleOpen}>Register</Button>
+                    </div>
+                </Grid>
+                <Grid item xs={12}  display={'flex'} justifyContent={'center'} alignItems={'end'}>
+                    <img src={Girl} width={'100%'} alt="" />
+                </Grid>
+            </Grid>
+            )}
             <Footer />
 
-            <Modal open={open} onClose={handleClose} >
+            {/* <Modal open={open} onClose={handleClose} >
                 <Box sx={style} >
 
                     <div style={{ display: 'flex', justifyContent: 'end' }}>
@@ -114,7 +141,7 @@ const LandingPg = () => {
                     </Grid>
                    
                 </Box>
-            </Modal>
+            </Modal> */}
         </>
     );
 };

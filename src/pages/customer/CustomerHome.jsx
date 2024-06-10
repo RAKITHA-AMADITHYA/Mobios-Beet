@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from '@mui/material'
+import { Button, Grid, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
@@ -28,47 +28,15 @@ import CategoryCard from '../../components/category card/CategoryCard'
 
 const CustomerHome = () => {
 
+    const isMediumUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
+    const isMediumDown = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 2000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 6000,
-        pauseOnHover: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true,
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 1,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    };
 
 
     return (<>
-        <Grid container mt={'50px'}>
+
+        {/* Section 1 */}
+        {isMediumUp && (<Grid container mt={'50px'}>
 
 
             <Grid item xs={12} md={6} display={'flex'} justifyContent={'center'} alignItems={'center'}>
@@ -88,10 +56,33 @@ const CustomerHome = () => {
 
                 <Button variant='contained' style={{ marginTop: '50px' }}>Contact us</Button>
             </Grid>
-        </Grid>
+        </Grid>)}
 
-        {/* Groceries */}
-        <Grid item xs={12} md={6} p={5}>
+        {isMediumDown && (
+            <Grid container mt={'20px'}>
+
+
+                <Grid item xs={12} md={6} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+                    <img src={customerHome} width={'70%'} alt="" />
+                </Grid>
+                <Grid item xs={12} md={6} p={4}>
+                    <Typography variant="h3">
+                        No more carrots !
+                    </Typography>
+                    <Typography variant="p" mt={'5px'}>
+                        Welcome to Beet, where the world of shopping meets the convenience of loyalty.
+                        Beet is not just a platform; it's an immersive experience that brings together
+                        a diverse array of merchants, placing their loyalty programs right at your
+                        fingertips. In this digital realm, finding and supporting your favorite stores
+                        has never been easier.
+                    </Typography>
+
+                    <Button variant='contained' fullWidth style={{ marginTop: '15px' }}>Contact us</Button>
+                </Grid>
+            </Grid>)}
+
+        {/* Section 2 */}
+       {isMediumUp &&( <Grid item xs={12} md={6} p={5}>
             <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center' }}>
                 <Typography variant="h3" fontWeight={400}> My Loyalty</Typography>
                 <Typography variant="h6"> See your Loyalty</Typography>
@@ -110,11 +101,62 @@ const CustomerHome = () => {
 
 
 
-        </Grid>
+        </Grid>)}
+
+        {isMediumDown &&( <Grid item xs={12} md={6} p={5}>
+            <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center' }}>
+                <Typography variant="h3" fontWeight={400}> My Loyalty</Typography>
+                <Typography variant="h6"> See your Loyalty</Typography>
+
+            </div>
+
+            <Grid container sx={{display:'flex', overflowY:'scroll'}} spacing={2}>
+
+            <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
+                <LoyaltyCard image={keels} />
+            </Grid>
+            <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
+            <LoyaltyCard image={Cargeels} />
+             </Grid>
+             <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
+             <LoyaltyCard image={carnage} />
+             </Grid>
+
+             <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
+             <LoyaltyCard image={appleAsia} />
+             </Grid>
+
+
+            </Grid>
+
+
+            {/* Side scroller */}
+            {/* <Grid container sx={{ display: 'flex', overflowX: 'scroll', flexWrap: 'nowrap' }} spacing={2}>
+      <Grid item xs={12} display={'flex'} mt={5} gap={'50px'}>
+        <LoyaltyCard image={keels} />
+      </Grid>
+      <Grid item xs={12} display={'flex'} mt={5} gap={'50px'}>
+        <LoyaltyCard image={Cargeels} />
+      </Grid>
+      <Grid item xs={12} display={'flex'} mt={5} gap={'50px'}>
+        <LoyaltyCard image={carnage} />
+      </Grid>
+      <Grid item xs={12} display={'flex'} mt={5} gap={'50px'}>
+        <LoyaltyCard image={appleAsia} />
+      </Grid>
+           </Grid> */}
+
+
+        </Grid>)}
+
+
         <div style={{ width: '100%' }}>
             <img src={category} width={'100%'} alt="" />
         </div>
-        <Grid container xs={12} display={'flex'} mt={5} gap={'50px'} justifyContent={'center'}>
+
+        {/* Section 4 */}
+
+        {isMediumUp &&(<Grid container xs={12} display={'flex'} mt={5} gap={'50px'} justifyContent={'center'}>
             <Grid item xs={12} sm={6} md={3}>
                 <CategoryCard image={Groceries} title={'Groceries'} />
             </Grid>
@@ -139,15 +181,35 @@ const CustomerHome = () => {
             </Grid>
 
 
+        </Grid>)}
+
+        {isMediumDown &&(<Grid container spacing={2} p={2}>
+            <Grid item xs={6} >
+                <CategoryCard image={Groceries} title={'Groceries'} />
+            </Grid>
+            <Grid item xs={6} >
+                <CategoryCard image={ElectricAppliances} title={'Electric Appliances'} />
+            </Grid>
+            <Grid item xs={6} >
+                <CategoryCard image={HealthBeauty} title={'Health & Beauty'} />
+            </Grid>
+
+            <Grid item xs={6} >
+                <CategoryCard image={Dining} title={'Dining'} />
+            </Grid>
 
 
+            <Grid item xs={6} >
+                <CategoryCard image={Mother} title={'Mother & Baby care'} />
+            </Grid>
+
+            <Grid item xs={6} >
+                <CategoryCard image={Fashion} title={'Fashion'} />
+            </Grid>
 
 
-
-
-
-        </Grid>
-        <div style={{marginTop:'50px'}}>
+        </Grid>)}
+        <div style={{ marginTop: '50px' }}>
             <Footer />
         </div>
     </>
