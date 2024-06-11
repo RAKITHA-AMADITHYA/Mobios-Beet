@@ -1,6 +1,8 @@
 import { Button, Grid, TextField, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
-import tracking from '../assets/beet/tracking.png'
+import tracking from '../assets/beet/van1.png'
+import tracking2 from '../assets/beet/van2.png'
+
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
@@ -39,7 +41,7 @@ const Tracking = () => {
         {isMediumDown && (
             <Grid container p={2}>
                 <Grid item xs={12} md={5} display={'flex'} justifyContent={'end'} alignItems={'center'}>
-                    <img src={tracking} width={'100%'} alt="" />
+                    <img src={tracking2} width={'100%'} alt="" />
                 </Grid>
                 <Grid item xs={12} md={7} p={2}>
                     <Typography variant="h2">

@@ -6,10 +6,10 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import Footer from '../../components/footer/Footer'
 import ProductDescriptioon from '../../components/product description card/ProductDescription'
-import pos from "../../assets/beet/pos3.png"
-import loyalty from "../../assets/beet/loyalty2.png"
-import messege from "../../assets/beet/messege.png"
-import delivary from "../../assets/beet/delevary.png"
+import pos from "../../assets/beet/pos4.png"
+import loyalty from "../../assets/beet/loyalty3.png"
+import messege from "../../assets/beet/messeege2.png"
+import delivary from "../../assets/beet/delevary1.png"
 
 
 
