@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import LoadingAnimation from './components/loading animation/LoadingAnimation';
 import Layout from './layouts/Layout';
 import ThemeProvider from "./theme";
+import ContactUS from './pages/Contactus.jsx';
 
 
 
@@ -58,6 +59,7 @@ function App() {
             <Route path="/beet-loyalty" element={<SuspenseWrapper><Loyalty/></SuspenseWrapper>} />
             <Route path="/aboutus" element={<SuspenseWrapper><AboutUs/></SuspenseWrapper>} />
             <Route path="/merchant-home" element={<SuspenseWrapper><MerchantHome/></SuspenseWrapper>} />
+            <Route path="/contact-us" element={<SuspenseWrapper><ContactUS/></SuspenseWrapper>} />
 
 
            

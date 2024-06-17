@@ -1,6 +1,6 @@
 import { Grid, InputAdornment, TextField, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
-import catlogue from '../../assets/beet/catlogue.png'
+import catlogue from '../../assets/beet/catlog.png'
 import SearchIcon from '@mui/icons-material/Search';
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
@@ -80,7 +80,7 @@ const CustomerCatlogue = () => {
                         <BeetSearchFeild />
                     </Grid>
                     <Grid item xs={12} md={6} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-                        <img src={catlogue} width={'90%'} alt="" />
+                        <img src={catlogue} width={'50%'} alt="" />
                     </Grid>
                 </Grid>
 

@@ -3,7 +3,7 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import React from 'react'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
-import SignupImg from '../../assets/beet/merchant5.png'
+import SignupImg from '../../assets/beet/merchantSignup.png'
 import SignupImg2 from '../../assets/beet/merchant5.png'
 
 import { useNavigate } from 'react-router-dom'
@@ -72,7 +72,7 @@ const MerchantSignup = () => {
                 <Button onClick={handlelogin} variant='contained' style={{ marginTop: '10px' }} fullWidth>Sign Up</Button>
             </Grid>
             <Grid item xs={12} md={6} display={'flex'} justifyContent={'end'} alignItems={'center'}>
-                <img src={SignupImg} width={'75%'} height={'60%'} alt="" />
+                <img src={SignupImg} width={'75%'} height={'80%'} alt="" />
 
             </Grid>
 

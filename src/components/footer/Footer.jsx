@@ -11,7 +11,7 @@ const Footer = () => {
   const isMediumUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const isMediumDown = useMediaQuery((theme) => theme.breakpoints.down('md'));
   return (
-    <section style={{ background: '#B5334A' }}>
+    <section style={{ background: '#C93A53' }}>
       {isMediumUp && (<Grid container p={2}>
         <Grid item md={4}  >
           <img src={logo} width={'10%'} alt="" />

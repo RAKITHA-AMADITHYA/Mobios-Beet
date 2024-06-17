@@ -6,9 +6,9 @@ import Arpico from '../../assets/beet/Arpico.png'
 import Cargeels from '../../assets/beet/Cargeels.png'
 import appleAsia from '../../assets/beet/appleAsia.png'
 import carnage from '../../assets/beet/carnage.png'
-import customerHome from '../../assets/beet/customerHome.png'
+import customerHome from '../../assets/beet/customerhomepg.png'
 import keels from '../../assets/beet/keels.png'
-import category from '../../assets/beet/category.png'
+import truck from '../../assets/beet/truck.png'
 import Groceries from '../../assets/beet/Groceries.png'
 import ElectricAppliances from '../../assets/beet/ElectricAppliances.png'
 import HealthBeauty from '../../assets/beet/HealthBeauty.png'
@@ -35,42 +35,42 @@ const CustomerHome = () => {
         autoplay: true,
         autoplaySpeed: 3000, // 3 seconds
         responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
         ]
-      };
+    };
 
     return (<>
 
         {/* Section 1 */}
         {isMediumUp && (<Grid container mt={'50px'}>
-
+            
 
             <Grid item xs={12} md={6} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-                <img src={customerHome} width={'50%'} alt="" />
+                <img src={customerHome} width={'70%'} alt="" />
             </Grid>
-            <Grid item xs={12} md={6} p={5}>
+<Grid item xs={12} md={6} p={5}>
                 <Typography variant="h2">
                     No more carrots !
                 </Typography>
@@ -110,49 +110,49 @@ const CustomerHome = () => {
             </Grid>)}
 
         {/* Section 2 */}
-       {isMediumUp &&( <Grid item xs={12} md={6} p={5}>
+        {isMediumUp && (<Grid item xs={12} md={6} p={5}>
             <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center' }}>
                 <Typography variant="h3" fontWeight={400}> My Loyalty</Typography>
                 <Typography variant="h6"> See your Loyalty</Typography>
 
             </div>
 
-<div style={{marginTop:'20px'}}>
-            <Slider {...sliderSettings} >
-          <LoyaltyCard image={keels} />
-          <LoyaltyCard image={Cargeels} />
-          <LoyaltyCard image={carnage} />
-          <LoyaltyCard image={appleAsia} />
-          <LoyaltyCard image={Arpico} />
-          
-        </Slider></div>
+            <div style={{ marginTop: '20px' }}>
+                <Slider {...sliderSettings} >
+                    <LoyaltyCard image={keels} />
+                    <LoyaltyCard image={Cargeels} />
+                    <LoyaltyCard image={carnage} />
+                    <LoyaltyCard image={appleAsia} />
+                    <LoyaltyCard image={Arpico} />
+
+                </Slider></div>
 
 
 
         </Grid>)}
 
-        {isMediumDown &&( <Grid item xs={12} md={6} p={5}>
+        {isMediumDown && (<Grid item xs={12} md={6} p={5}>
             <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center' }}>
                 <Typography variant="h3" fontWeight={400}> My Loyalty</Typography>
                 <Typography variant="h6"> See your Loyalty</Typography>
 
             </div>
 
-            <Grid container sx={{display:'flex', overflowY:'scroll'}} spacing={2}>
+            <Grid container sx={{ display: 'flex', overflowY: 'scroll' }} spacing={2}>
 
-            <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
-                <LoyaltyCard image={keels} />
-            </Grid>
-            <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
-            <LoyaltyCard image={Cargeels} />
-             </Grid>
-             <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
-             <LoyaltyCard image={carnage} />
-             </Grid>
+                <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
+                    <LoyaltyCard image={keels} />
+                </Grid>
+                <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
+                    <LoyaltyCard image={Cargeels} />
+                </Grid>
+                <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
+                    <LoyaltyCard image={carnage} />
+                </Grid>
 
-             <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
-             <LoyaltyCard image={appleAsia} />
-             </Grid>
+                <Grid item xs={6} display={'flex'} mt={5} gap={'50px'}>
+                    <LoyaltyCard image={appleAsia} />
+                </Grid>
 
 
             </Grid>
@@ -178,13 +178,20 @@ const CustomerHome = () => {
         </Grid>)}
 
 
-        <div style={{ width: '100%' }}>
-            <img src={category} width={'100%'} alt="" />
-        </div>
+        <Grid container sx={{bgcolor:'#dc9da8',p:2,mt:'70px'}}>
+            <Grid item xs={8}>
+                <Typography variant='h4'>Category</Typography>
+            </Grid>
+            <Grid item xs={4}mt={-10} display={'flex'} justifyContent={'end'}>
+                <img src={truck} width={'50%'} alt="" />
+            </Grid>
+
+            {/* <img src={category} width={'100%'} alt="" /> */}
+        </Grid>
 
         {/* Section 4 */}
 
-        {isMediumUp &&(<Grid container xs={12} display={'flex'} mt={5} gap={'50px'} justifyContent={'center'}>
+        {isMediumUp && (<Grid container xs={12} display={'flex'} mt={5} gap={'50px'} justifyContent={'center'}>
             <Grid item xs={12} sm={6} md={3}>
                 <CategoryCard image={Groceries} title={'Groceries'} />
             </Grid>
@@ -211,7 +218,7 @@ const CustomerHome = () => {
 
         </Grid>)}
 
-        {isMediumDown &&(<Grid container spacing={2} p={2}>
+        {isMediumDown && (<Grid container spacing={2} p={2}>
             <Grid item xs={6} >
                 <CategoryCard image={Groceries} title={'Groceries'} />
             </Grid>

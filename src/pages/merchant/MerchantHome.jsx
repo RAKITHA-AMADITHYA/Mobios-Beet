@@ -1,6 +1,6 @@
 import { Button, Grid, TextField, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
-import merchant from '../../assets/beet/mHome.png'
+import merchant from '../../assets/beet/shop.png'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'

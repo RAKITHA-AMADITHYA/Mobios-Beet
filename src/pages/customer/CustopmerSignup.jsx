@@ -3,7 +3,7 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import React from 'react'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
-import SignupImg from '../../assets/beet/signup.png'
+import SignupImg from '../../assets/beet/customer1.png'
 import { useNavigate } from 'react-router-dom'
 
 
