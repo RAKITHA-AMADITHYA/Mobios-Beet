@@ -1,7 +1,7 @@
 import { Button, Grid, TextField, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
-import LOYALTY from '../assets/beet/LOYALTY.png'
-import loyalty1 from '../assets/beet/loyalty1.png'
+import LOYALTY from '../assets/beet/loyalty4.png'
+import loyalty1 from '../assets/beet/loyalty4.png'
 
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'

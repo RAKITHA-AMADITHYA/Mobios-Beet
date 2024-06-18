@@ -1,6 +1,6 @@
 import { Button, Grid, TextField, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
-import aboutus from '../assets/beet/aboutus.png'
+import aboutus from '../assets/beet/aboutus1.png'
 import sittingman from '../assets/beet/sittingman.png'
 import mobios from '../assets/beet/mobios.png'
 
@@ -69,10 +69,9 @@ const AboutUs = () => {
             <Grid container p={2} >
 
                 <Grid item xs={12} md={5} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-                    <img src={sittingman} width={'50%'} alt="" />
+                    <img src={mobios} width={'50%'} alt="" />
                 </Grid>
                 <Grid item xs={12} md={7} p={2}>
-                    <img src={mobios} width={'20%'} alt="" />
 
                     <Typography variant="h4" mt={'10px'}>
                         About MobiOs                </Typography>

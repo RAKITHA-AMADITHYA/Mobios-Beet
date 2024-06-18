@@ -7,6 +7,8 @@ import Footer from '../components/footer/Footer';
 import CloseIcon from '@mui/icons-material/Close';
 import Cart from '../assets/beet/cart.png';
 import merchant from '../assets/beet/merchant.png';
+import bgImg from '../assets/beet/bgImg.png';
+
 import Map from '../assets/beet/map';
 import BeetTooltip from '../components/beetTooltip/BeetTooltip';
 
@@ -37,13 +39,13 @@ const LandingPg = () => {
   return (
     <>
       {isMediumUp && (
-        <div style={{ position: 'relative' }}>
+        <div style={{ position: 'relative', backgroundColor: '#ffff', backgroundImage: `url(${bgImg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '90vh', backgroundAttachment: 'fixed' }}>
           <Grid item p={5}>
             <Typography variant='h3' fontWeight={800} fontSize={'50px'} sx={{
               fontSize: {
-                md: '16px',  // Medium screens
-                lg: '30px',  // Large screens
-                xl: '20px',  // Extra-large screens
+                md: '16px',  
+                lg: '30px',
+                xl: '20px',  
               },
             }}>
               Manage your<span style={{ color: '#b5334a' }}> Suppliers, Inventory, Stocks, Sales,<br /> Customer Loyalty, Finance reports</span> <br />and <span style={{ color: '#b5334a' }}>Delivery</span> on <br />one platform.

@@ -2,7 +2,7 @@ import { Button, Grid, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
-import CommunicationImg from '../assets/beet/communication.png'
+import CommunicationImg from '../assets/beet/communication1.png'
 import Footer from '../components/footer/Footer'
 
 

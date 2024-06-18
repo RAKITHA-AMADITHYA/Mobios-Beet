@@ -1,7 +1,7 @@
 import { Button, Grid, TextField, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
-import pos from '../assets/beet/pos.png'
-import pos1 from '../assets/beet/pos1.png'
+import pos from '../assets/beet/pos5.png'
+import pos1 from '../assets/beet/pos5.png'
 
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
